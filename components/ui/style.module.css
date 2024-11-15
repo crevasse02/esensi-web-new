@@ -1,0 +1,44 @@
+.cardContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+}
+
+.cardContainer .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 500px;
+  width: 1000px;
+  border-radius: 25px;
+  padding: 50px;
+  transform-origin: top;
+}
+
+
+.cardContainer .card .body {
+  display: flex;
+  height: 100%;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+.cardContainer .card .body .imageContainer {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.cardContainer .card .body .imageContainer .inner {
+  width: 100%;
+  height: 100%;
+}
+
+.cardContainer .card .body .imageContainer img {
+  object-fit: cover;
+}
