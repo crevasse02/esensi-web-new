@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 interface HoveredLinkProps {
@@ -79,42 +78,10 @@ export const Menu = ({
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={transition}
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full border border-transparent bg-white shadow-[0px_5px_20px_0px] shadow-cyan-100 flex justify-center space-x-4 px-8 py-6 gap-10"
+      className="inline-flex -mb-4 items-center mx-4 w-full md:max-w-max relative rounded-xl border border-transparent bg-white bg-opacity-70 backdrop-blur-md shadow-[0px_0px_1px_0px] shadow-black md:justify-center justify-between p-2 gap-5"
     >
       {children}
     </motion.nav>
-  );
-};
-
-export const ProductItem = ({
-  title,
-  description,
-  href,
-  src,
-}: {
-  title: string;
-  description: string;
-  href: string;
-  src: string;
-}) => {
-  return (
-    <Link href={href} className="flex space-x-2">
-      <Image
-        src={src}
-        width={140}
-        height={70}
-        alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl"
-      />
-      <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
-          {title}
-        </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
-          {description}
-        </p>
-      </div>
-    </Link>
   );
 };
 
@@ -127,12 +94,12 @@ export const HoveredLink = ({ children, href, ...rest }: HoveredLinkProps) => {
     <Link
       {...rest}
       href={href}
-      className={`text-neutral-400 font-semibold dark:text-neutral-200 hover:text-sky-800 hover:underline underline-offset-4 decoration-2  decoration-amber-500 text-[10px]  ${
+      className={`text-neutral-950 font-medium  hover:underline underline-offset-4 decoration-2  text-[14px]  ${
         isActive ? "text-sky-800 underline  " : "" // Apply a different color when active
       }`}
     >
       <motion.div
-        whileHover={{ scale: 1.10 }} 
+        whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 1 }}
         onHoverEnd={() => {}}
       >
