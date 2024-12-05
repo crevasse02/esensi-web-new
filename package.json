@@ -35,7 +35,9 @@
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.170.0",
-    "three-globe": "^2.34.4"
+    "three-globe": "^2.34.4",
+    "webpack": "^5.97.0",
+    "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
