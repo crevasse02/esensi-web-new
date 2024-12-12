@@ -1,18 +1,39 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image"; // Correct import
+import { useEffect, useState } from "react";
 
 const images = [
-  "/images/carousel1.webp",
-  "/images/carousel2.webp",
-  "/images/carousel3.webp",
-  "/images/carousel4.webp",
-  "/images/carousel5.webp",
-  "/images/carousel6.webp",
-  "/images/carousel7.webp",
+  "/images/carousel/carousel1.webp",
+  "/images/carousel/carousel2.webp",
+  "/images/carousel/carousel3.webp",
+  "/images/carousel/carousel4.webp",
+  "/images/carousel/carousel5.webp",
+  "/images/carousel/carousel6.webp",
+  "/images/carousel/carousel7.webp",
+  "/images/carousel/carousel8.webp",
+  "/images/carousel/carousel9.webp",
+  "/images/carousel/carousel10.webp",
+  "/images/carousel/carousel11.webp",
+  "/images/carousel/carousel12.webp",
+  "/images/carousel/carousel13.webp",
+  "/images/carousel/carousel14.webp",
+  "/images/carousel/carousel15.webp",
+  "/images/carousel/carousel16.webp",
+  "/images/carousel/carousel17.webp",
+  "/images/carousel/carousel18.webp",
 ];
 
 export function AnimatedCarousel() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Update state based on the client's window width
+    setIsMobile(window.innerWidth <= 768);
+    setIsMounted(true);
+  }, []);
+
   return (
     <div
       className="relative overflow-hidden w-[90%] mt-10"
@@ -31,23 +52,23 @@ export function AnimatedCarousel() {
       <motion.div
         className="flex w-full "
         animate={{
-          x: window.innerWidth <= 768 ? ["0%",  "-338%"] : ["0%",  "-196.8%"], // Move images left to create infinite loop
+          x: isMounted && isMobile ? ["0%", "-940%"] : ["0%", "-252%"], // Move images left to create infinite loop
         }}
         transition={{
-          duration: 20, // Duration of the full transition (can be adjusted)
+          duration: 40, // Duration of the full transition (can be adjusted)
           ease: "linear", // Smooth linear transition
           repeat: Infinity, // Infinite loop
         }}
       >
-        {[...images, ...images, ...images].map((src, index) => (
+        {[...images, ...images].map((src, index) => (
           <motion.div key={index} className=" mx-10 ">
             {/* Use Image component correctly */}
             <div className="relative w-[100px] h-[100px]">
               <Image
                 src={src}
                 alt={`Carousel Image ${index}`}
-                layout="fill"
-                objectFit="contain"
+                fill
+                style={{ objectFit: "contain" }}
               />
             </div>
           </motion.div>

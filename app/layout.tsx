@@ -1,7 +1,14 @@
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/app/client-component/navbar";
+
+// Load Google Font using next/font
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Esensi Digital",
@@ -15,14 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* Google Fonts link */}
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={` antialiased `}>
+      <body className={`${plusJakartaSans.className} antialiased`}>
         <Navbar />
         {children}
       </body>

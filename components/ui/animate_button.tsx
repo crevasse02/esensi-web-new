@@ -1,10 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import EnterIcon from "@/public/icons/entericon.svg";
 
 interface AnimatedButtonProps {
   text: string; // Define the prop type for the button text
+  icon?: ReactNode;
 }
 
 export function AnimatedButtonRotateIcon({ text }: AnimatedButtonProps) {
@@ -31,22 +32,22 @@ export function AnimatedButtonRotateIcon({ text }: AnimatedButtonProps) {
   );
 }
 
-export function AnimatedButtonUpscale({ text }: AnimatedButtonProps) {
-
+export function AnimatedButtonUpscale({ text, icon }: AnimatedButtonProps) {
   return (
     <motion.button
       whileHover={{
-        scale: 1.1, 
+        scale: 1.1,
         translateY: -3,
-        boxShadow: "0 0 0 6px rgba(0, 0, 0, 0.1)", 
+        boxShadow: "0 0 0 6px rgba(0, 0, 0, 0.1)",
       }}
       transition={{
         duration: 0.2,
         ease: "easeOut",
       }}
-      className="items-center px-6 hover:bg-opacity-80 py-2 rounded-xl border border-neutral-600 text-white bg-black shadow-inner-shadow"
+      className="items-center  flex gap-2 px-6 hover:bg-opacity-80 py-2 rounded-xl border border-neutral-600 text-white bg-black shadow-inner-shadow"
     >
-      {text}
+      <span>{icon}</span>
+      <span>{text}</span>
     </motion.button>
   );
 }
