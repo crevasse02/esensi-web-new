@@ -74,7 +74,7 @@ export function ScrollingService() {
           src={`/images/scrollingService/branding.webp`}
           alt="hero"
           fill
-          className="mx-auto rounded-2xl object-fill h-auto w-full object-left-top"
+          className="mx-auto rounded-2xl object-fill h-auto w-auto object-left-top"
           draggable={false}
         />
       </ContainerScroll>

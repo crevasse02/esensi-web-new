@@ -11,6 +11,7 @@ import { ScrollingService } from "../client-component/scrolling_service";
 import { cards, faq } from "@/app/client-component/data";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { AccordionSection } from "../client-component/accordion_section";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 export default function Home() {
   return (
@@ -142,48 +143,50 @@ export default function Home() {
 
       {/* Services */}
       <section className=" overflow-hidden bg-[#FCF9F5] py-20  flex flex-col justify-center items-center relative">
-        <div className="text-center  md:w-[50%]">
-          <Badge variant="outline" className="mb-5">
-            Services
-          </Badge>
-          <h3 className="md:text-[44px] text-[30px] text-center leading-none font-bold">
-            Ideas <span className="text-[#72716F]">that delivers</span>
-          </h3>
-          <p className="text-center leading-normal mt-5 text-[#72716F]">
-            Experience end-to-end ideas services that help you stand out and
-            achieve your business goals.
-          </p>
-        </div>
-        <div className="place-items-center mt-6">
-          <AnimatedButtonUpscale text="Book A Call" icon={<HandIcon />} />
-        </div>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-4 w-full mt-16">
-          <div className="col-span-1  text-center  p-4 ">
-            <h3 className="font-bold md:text-[44px] text-[22px]">350+</h3>
-            <h5 className="md:text-[18px] text-[18px]">Our Happy Client</h5>
-            <p className="text-gray-500 mt-5">
-              Empowering startups and enterprises to secure <br /> over 350
-              clients raised
+        <div className="max-w-[1600px]">
+          <div className="text-center  md:w-[50%]">
+            <Badge variant="outline" className="mb-5">
+              Services
+            </Badge>
+            <h3 className="md:text-[44px] text-[30px] text-center leading-none font-bold">
+              Ideas <span className="text-[#72716F]">that delivers</span>
+            </h3>
+            <p className="text-center leading-normal mt-5 text-[#72716F]">
+              Experience end-to-end ideas services that help you stand out and
+              achieve your business goals.
             </p>
           </div>
-          <div className="col-span-1  text-center  p-4 ">
-            <h3 className="font-bold md:text-[44px] text-[22px]">97%</h3>
-            <h5 className="md:text-[18px] text-[18px]">Success Rate</h5>
-            <p className="text-gray-500 mt-5">
-              Consistently delivering exceptional results that <br /> exceed
-              client expectations.
-            </p>
+          <div className="place-items-center mt-6">
+            <AnimatedButtonUpscale text="Book A Call" icon={<HandIcon />} />
           </div>
-          <div className="col-span-1  text-center  p-4 ">
-            <h3 className="font-bold md:text-[44px] text-[22px]">7+ Years</h3>
-            <h5 className="md:text-[18px] text-[18px]">In business</h5>
-            <p className="text-gray-500 mt-5">
-              Half a decade of shaping digital experiences and <br /> driving
-              business growth.
-            </p>
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-4 w-full mt-16">
+            <div className="col-span-1  text-center  p-4 ">
+              <h3 className="font-bold md:text-[44px] text-[22px]">350+</h3>
+              <h5 className="md:text-[18px] text-[18px]">Our Happy Client</h5>
+              <p className="text-gray-500 mt-5">
+                Empowering startups and enterprises to secure <br /> over 350
+                clients raised
+              </p>
+            </div>
+            <div className="col-span-1  text-center  p-4 ">
+              <h3 className="font-bold md:text-[44px] text-[22px]">97%</h3>
+              <h5 className="md:text-[18px] text-[18px]">Success Rate</h5>
+              <p className="text-gray-500 mt-5">
+                Consistently delivering exceptional results that <br /> exceed
+                client expectations.
+              </p>
+            </div>
+            <div className="col-span-1  text-center  p-4 ">
+              <h3 className="font-bold md:text-[44px] text-[22px]">7+ Years</h3>
+              <h5 className="md:text-[18px] text-[18px]">In business</h5>
+              <p className="text-gray-500 mt-5">
+                Half a decade of shaping digital experiences and <br /> driving
+                business growth.
+              </p>
+            </div>
           </div>
+          <ScrollingService />
         </div>
-        <ScrollingService />
       </section>
 
       {/* Portfolio */}
@@ -204,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* Process*/}
-      <section className=" overflow-hidden py-20  flex flex-col justify-center items-center relative">
+      <section className=" max-w-[1600px] place-self-center overflow-hidden py-20  flex flex-col justify-center items-center relative">
         <div className="text-center mt-40 md:w-[50%]">
           <Badge variant="outline" className="mb-5">
             Process
@@ -226,7 +229,7 @@ export default function Home() {
       </section>
 
       {/* Questions */}
-      <section className=" overflow-hidden py-20  flex flex-col justify-center items-center relative">
+      <section className="overflow-hidden py-20  flex flex-col justify-center items-center relative">
         <div className="text-center mt-40 md:w-[50%]">
           <Badge variant="outline" className="mb-5">
             Questions
@@ -241,13 +244,22 @@ export default function Home() {
           </p>
         </div>
         <div className="mb-20 relative ">
-          <div className="bg-[#ff542e] rounded-full blur-3xl h-[39px] overflow-hidden absolute bottom-[100px] left-0 w-full">
-
-          </div>
+          <div className="bg-[#ff542e] rounded-full blur-3xl h-[39px] overflow-hidden absolute bottom-[100px] left-0 w-full"></div>
           <div className="md:w-[800px] m-3 relative p-3 mt-5 bg-[#F0EEEB] rounded-3xl z-10">
             <AccordionSection items={faq} />
           </div>
         </div>
+      </section>
+
+      {/* before footer */}
+      <section className="overflow-hidden py-20  flex flex-col justify-center items-center relative">
+        <BackgroundGradientAnimation>
+          <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-center md:text-[48px] text-[20px] ">
+            <p className="bg-clip-text text-white">
+              Why wait? Take the leap. Let's make your business essential
+            </p>
+          </div>
+        </BackgroundGradientAnimation>
       </section>
     </div>
   );
