@@ -1,7 +1,8 @@
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Plus_Jakarta_Sans } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/app/client-component/navbar";
+import { Footer } from "@/app/client-component/footer";
 
 // Load Google Font using next/font
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={`${plusJakartaSans.className} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

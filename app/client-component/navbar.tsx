@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { AnimatedButtonRotateIcon } from "@/components/ui/animate_button";
 
-
 export function Navbar({ className }: { className?: string }) {
   const [, setActive] = useState<string | null>(null);
   return (
@@ -36,16 +35,16 @@ export function Navbar({ className }: { className?: string }) {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-white shadow-lg rounded-md">
             <DropdownMenuItem>
-              <HoveredLink href="/">Home</HoveredLink>
+              <HoveredLink from="head" href="/">Home</HoveredLink>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <HoveredLink href="/case-study">About</HoveredLink>
+              <HoveredLink from="head" href="/case-study">About</HoveredLink>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <HoveredLink href="/services">Services</HoveredLink>
+              <HoveredLink from="head" href="/services">Services</HoveredLink>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <HoveredLink href="/faq">Work</HoveredLink>
+              <HoveredLink from="head" href="/faq">Work</HoveredLink>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <button className="px-4 py-2 rounded-xl border border-neutral-600 text-black bg-white hover:bg-blue-500 hover:text-white transition duration-200">
@@ -64,10 +63,18 @@ export function Navbar({ className }: { className?: string }) {
         {/* Horizontal menu for desktop */}
         <div className="hidden lg:flex">
           <div className="space-x-5 lg:flex items-center">
-            <HoveredLink href="/">Home</HoveredLink>
-            <HoveredLink href="/case-study">About</HoveredLink>
-            <HoveredLink href="/services">Services</HoveredLink>
-            <HoveredLink href="/faq">Work</HoveredLink>
+            <HoveredLink from="head" href="/">
+              Home
+            </HoveredLink>
+            <HoveredLink from="head" href="/case-study">
+              About
+            </HoveredLink>
+            <HoveredLink from="head" href="/services">
+              Services
+            </HoveredLink>
+            <HoveredLink from="head" href="/faq">
+              Work
+            </HoveredLink>
           </div>
           <AnimatedButtonRotateIcon text="Say hi"></AnimatedButtonRotateIcon>
         </div>

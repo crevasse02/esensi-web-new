@@ -7,7 +7,7 @@ export const BackgroundGradientAnimation = ({
   gradientBackgroundEnd = "#005490",
   secondColor = "255, 255, 255",
   pointerColor = "255, 255, 255",
-  size = "40%",
+  size = "60%",
   blendingValue = "hard-light",
   children,
   className,
@@ -108,10 +108,10 @@ export const BackgroundGradientAnimation = ({
       >
         <div
           className={cn(
-            `absolute [background:radial-gradient(circle_at_center,_rgba(var(--second-color),_0.8)_0,_rgba(var(--second-color),_0)_50%)_no-repeat]`,
+            `absolute [background:radial-gradient(circle_at_center,_rgba(var(--second-color),_1)_0,_rgba(var(--second-color),_0)_50%)_no-repeat]`,
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `animate-second`,
-            `opacity-100`
+            `opacity-50`
           )}
         ></div>
 
@@ -122,7 +122,7 @@ export const BackgroundGradientAnimation = ({
             className={cn(
               `absolute [background:radial-gradient(circle_at_center,_rgba(var(--pointer-color),_0.5)_0,_rgba(var(--pointer-color),_0)_20%)_no-repeat]`,
               `[mix-blend-mode:var(--blending-value)] w-full h-full -top-1/2 -left-1/2`,
-              `opacity-70`
+              `opacity-30`
             )}
           ></div>
         )}

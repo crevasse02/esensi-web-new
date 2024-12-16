@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 interface HoveredLinkProps {
   href: string;
   children: React.ReactNode;
+  from: string;
 }
 
 const transition = {
@@ -85,7 +86,12 @@ export const Menu = ({
   );
 };
 
-export const HoveredLink = ({ children, href, ...rest }: HoveredLinkProps) => {
+export const HoveredLink = ({
+  children,
+  href,
+  from,
+  ...rest
+}: HoveredLinkProps) => {
   const path = usePathname();
 
   const isActive = path === href;
@@ -94,14 +100,19 @@ export const HoveredLink = ({ children, href, ...rest }: HoveredLinkProps) => {
     <Link
       {...rest}
       href={href}
-      className={`text-neutral-950 font-medium  hover:underline underline-offset-4 decoration-2  text-[14px]  ${
-        isActive ? "text-sky-800 underline  " : "" // Apply a different color when active
+      className={`font-medium hover:underline underline-offset-4 decoration-2  text-[14px]  ${
+        isActive
+          ? from === "head"
+            ? "text-sky-800 underline"
+            : "text-white underline "
+          : ""
       }`}
     >
       <motion.div
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: from === "head" ? "1.1" : "1" }}
         whileTap={{ scale: 1 }}
         onHoverEnd={() => {}}
+        className={`${from == "foot" ? "hover:opacity-100 opacity-50" : ""}`}
       >
         {children}
       </motion.div>

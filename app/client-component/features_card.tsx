@@ -47,7 +47,7 @@ export function FeaturesCard() {
               key={index}
               className={`p-10 ${
                 index % 3 !== 2 ? "border-r-[1px]" : ""
-              } hover:bg-[#005490] hover:text-white`}
+              } hover:bg-[#005490] hover:!text-white`}
             >
               {card.icon}
               <h3 className="text-xl font-bold mb-2 ">{card.title}</h3>
