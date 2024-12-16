@@ -254,7 +254,7 @@ export default function Home() {
             Questions
           </Badge>
           <h3 className="md:text-[44px] text-[30px] text-center leading-none font-bold">
-            <span className="text-[#72716F]">Got questions?</span> We've got
+            <span className="text-[#72716F]">Got questions?</span> We`&apos;ve got
             answers
           </h3>
           <p className="text-center leading-normal mt-5 text-[#72716F]">
@@ -277,7 +277,7 @@ export default function Home() {
             <p
               className={`${instrumentSerif.className}  bg-clip-text text-white md:text-[48px] text-[24px]`}
             >
-              Why wait? Take the leap. Let's make your <br/> business essential
+              Why wait? Take the leap. Let`&apos;s make your <br/> business essential
             </p>
             <div className="place-self-center pointer-events-auto mt-20">
               <AnimatedButtonUpscale
