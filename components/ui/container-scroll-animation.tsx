@@ -109,13 +109,13 @@ export const Button = ({ buttonText }: ButtonProps) => {
           className="absolute right-0 top-0 bottom-0  z-0 "
           animate={{
             width: isHover ? "200px" : "40px",
-            borderRadius: isHover ? "40px" : "50%",
+            borderRadius: isHover ? "40px" : "40px",
             backgroundColor: isHover ? "#FC5E42" : "white",
             margin: isHover ? "0px" : "2px",
           }}
           initial={{
             width: "40px",
-            borderRadius: "50%",
+            borderRadius: "40px",
             backgroundColor: "white",
           }}
           transition={{ duration: 0.3, ease: "easeOut" }}

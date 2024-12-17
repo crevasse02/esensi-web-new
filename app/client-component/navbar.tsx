@@ -38,7 +38,7 @@ export function Navbar({ className }: { className?: string }) {
               <HoveredLink from="head" href="/">Home</HoveredLink>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <HoveredLink from="head" href="/case-study">About</HoveredLink>
+              <HoveredLink from="head" href="/about">About</HoveredLink>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <HoveredLink from="head" href="/services">Services</HoveredLink>
@@ -66,7 +66,7 @@ export function Navbar({ className }: { className?: string }) {
             <HoveredLink from="head" href="/">
               Home
             </HoveredLink>
-            <HoveredLink from="head" href="/case-study">
+            <HoveredLink from="head" href="/about">
               About
             </HoveredLink>
             <HoveredLink from="head" href="/services">

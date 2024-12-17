@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { FeaturesCard } from "../client-component/features_card";
 import HandIcon from "@/public/icons/hand-waving.svg";
-import { InfiniteMovingCardsComponent } from "../client-component/infinite_card";
+import {InfiniteMovingCardsComponentHome } from "../client-component/infinite_card";
 import { ScrollingService } from "../client-component/scrolling_service";
 import { cards, faq } from "@/app/client-component/data";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
@@ -103,7 +103,7 @@ export default function Home() {
       </div>
 
       {/* These companies trust us */}
-      <section className=" overflow-hiddenpy-20  flex flex-col justify-center items-center relative">
+      <section className=" overflow-hidden py-20  flex flex-col justify-center items-center relative">
         <h3 className="md:text-[44px] text-[30px] text-center leading-none font-bold">
           <span className="text-[#72716F]">These companies </span>trust us
         </h3>
@@ -148,7 +148,7 @@ export default function Home() {
           </p>
         </div>
         <div className="mt-10">
-          <InfiniteMovingCardsComponent />
+          <InfiniteMovingCardsComponentHome />
         </div>
       </section>
 
