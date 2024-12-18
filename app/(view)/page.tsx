@@ -120,9 +120,9 @@ export default function Home() {
             your brand, ensuring flawless execution and stunning results.
           </p>
         </div>
-        <div className="mt-24">
+        <div className="mt-24 mx-5 justify-items-center">
           <FeaturesCard />
-          <div className="place-self-center mt-6">
+          <div className=" mt-6">
             <AnimatedButtonUpscale
               text="Book A Call"
               icon={<HandIcon />}
@@ -273,13 +273,13 @@ export default function Home() {
       {/* before footer */}
       <section className="overflow-hidden pt-20  flex flex-col justify-center items-center relative">
         <BackgroundGradientAnimation>
-          <div className="absolute z-10 inset-0 flex-col pointer-events-none mt-28  text-white font-bold px-4  text-center ">
+          <div className="justify-items-center absolute z-10 inset-0 flex-col pointer-events-none mt-28  text-white font-bold px-4  text-center ">
             <p
               className={`${instrumentSerif.className}  bg-clip-text text-white md:text-[48px] text-[24px]`}
             >
               Why wait? Take the leap. Let&apos;s make your <br/> business essential
             </p>
-            <div className="place-self-center pointer-events-auto mt-20">
+            <div className=" pointer-events-auto mt-20">
               <AnimatedButtonUpscale
                 text="Say Hello"
                 className="bg-white text-black px-10 py-4 border-none"

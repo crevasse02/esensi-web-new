@@ -46,8 +46,8 @@ export function FeaturesCard() {
             <div
               key={index}
               className={`p-10 ${
-                index % 3 !== 2 ? "border-r-[1px]" : ""
-              } hover:bg-[#005490] hover:!text-white`}
+                index % 3 !== 2 ? "md:border-r-[1px]" : ""
+              } hover:bg-[#005490] hover:!text-white border-b-[1px]`}
             >
               {card.icon}
               <h3 className="text-xl font-bold mb-2 ">{card.title}</h3>
@@ -62,8 +62,8 @@ export function FeaturesCard() {
             <div
               key={index + 3}
               className={`p-10 ${
-                index % 3 !== 1 ? "border-r-[1px]" : ""
-              } hover:bg-[#005490] hover:!text-white `}
+                index % 3 !== 1 ? "md:border-r-[1px]" : ""
+              } hover:bg-[#005490] hover:!text-white border-b-[1px] `}
             >
               {card.icon}
               <h3 className="text-xl font-bold mb-2 ">{card.title}</h3>
