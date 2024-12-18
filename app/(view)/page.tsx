@@ -120,9 +120,9 @@ export default function Home() {
             your brand, ensuring flawless execution and stunning results.
           </p>
         </div>
-        <div className="mt-24 mx-5 justify-items-center">
+        <div className="mt-24 mx-5">
           <FeaturesCard />
-          <div className=" mt-6">
+          <div className=" mt-6 flex justify-center">
             <AnimatedButtonUpscale
               text="Book A Call"
               icon={<HandIcon />}
@@ -279,7 +279,7 @@ export default function Home() {
             >
               Why wait? Take the leap. Let&apos;s make your <br/> business essential
             </p>
-            <div className=" pointer-events-auto mt-20">
+            <div className=" pointer-events-auto mt-20 flex justify-center">
               <AnimatedButtonUpscale
                 text="Say Hello"
                 className="bg-white text-black px-10 py-4 border-none"
