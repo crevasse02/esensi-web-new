@@ -122,7 +122,7 @@ export default function Home() {
         </div>
         <div className="mt-24">
           <FeaturesCard />
-          <div className="place-items-center mt-6">
+          <div className="place-self-center mt-6">
             <AnimatedButtonUpscale
               text="Book A Call"
               icon={<HandIcon />}
@@ -166,7 +166,7 @@ export default function Home() {
             achieve your business goals.
           </p>
         </div>
-        <div className="place-items-center mt-6">
+        <div className="place-self-center mt-6">
           <AnimatedButtonUpscale
             text="Book A Call"
             icon={<HandIcon />}
