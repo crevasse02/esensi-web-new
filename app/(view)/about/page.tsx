@@ -13,7 +13,7 @@ const about = () => {
       {/* Hero ATF */}
       <div className="overflow-hidden ">
         <section
-          className="h-fit py-52 flex flex-col bg-[#FBF9F5] w-screen justify-center items-center bg-cover relative"
+          className="h-screen py-52 flex flex-col bg-[#FBF9F5] w-screen justify-center items-center bg-cover relative"
           style={{ backgroundImage: "url('/images/HeroAbout.webp')" }}
         >
           <h5 className="md:text-[36px] text-[20px] text-center leading-tight max-w-[640px]">
@@ -100,9 +100,9 @@ const about = () => {
             your brand, ensuring flawless execution and stunning results.
           </p>
         </div>
-        <div className="mt-24">
+        <div className="mt-24 px-5">
           <FeaturesCard />
-          <div className="place-items-center my-14">
+          <div className="my-14 flex justify-center">
             <AnimatedButtonUpscale
               text="Book A Call"
               icon={<HandIcon />}

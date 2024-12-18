@@ -103,7 +103,7 @@ export const HoveredLink = ({
       className={`font-medium hover:underline underline-offset-4 decoration-2  text-[14px]  ${
         isActive
           ? from === "head"
-            ? "text-sky-800 underline"
+            ? "text- underline"
             : "text-white underline "
           : ""
       }`}

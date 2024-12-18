@@ -9,30 +9,30 @@ const cards = [
     title: "Strategic Ideas Thinking",
     description:
       "We elevate with your business goals in mind, ensuring impactful results.",
-    icon: <BezierIcon />,
+    icon: <BezierIcon className="hover:fill-white fill-black" />,
   },
   {
     title: "Collaborative Process",
     description:
       "We work closely with you, blending your vision with our creative expertise.",
-    icon: <UsersIcon />,
+    icon: <UsersIcon className="hover:fill-white fill-black" />,
   },
   {
     title: "Proven Track Record",
     description:
       "Our success is reflected in the achievements of our satisfied clients.",
-    icon: <TrophyIcon />,
+    icon: <TrophyIcon className="hover:fill-white fill-black" />,
   },
   {
     title: "End-to-End Service Offering",
     description: "From branding to launch, we cover all your design needs.",
-    icon: <RocketIcon />,
+    icon: <RocketIcon className="hover:fill-white fill-black"/>,
   },
   {
     title: "Innovation-Driven Approach",
     description:
       "We leverage the latest trends to keep your brand ahead of the curve.",
-    icon: <PencilIcon />,
+    icon: <PencilIcon className="hover:fill-white fill-black"/>,
   },
 ];
 
@@ -47,7 +47,7 @@ export function FeaturesCard() {
               key={index}
               className={`p-10 ${
                 index % 3 !== 2 ? "md:border-r-[1px]" : ""
-              } hover:bg-[#005490] hover:!text-white border-b-[1px]`}
+              } hover:bg-[#005490]  hover:!text-white border-b-[1px]`}
             >
               {card.icon}
               <h3 className="text-xl font-bold mb-2 ">{card.title}</h3>
@@ -65,7 +65,9 @@ export function FeaturesCard() {
                 index % 3 !== 1 ? "md:border-r-[1px]" : ""
               } hover:bg-[#005490] hover:!text-white border-b-[1px] `}
             >
-              {card.icon}
+              <div className="group-hover:fill-white fill-black transition duration-200">
+                {card.icon}
+              </div>
               <h3 className="text-xl font-bold mb-2 ">{card.title}</h3>
               <p>{card.description}</p>
             </div>

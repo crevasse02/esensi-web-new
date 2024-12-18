@@ -57,7 +57,8 @@ export const faq = [
       "By request. Please contact us if you’re interested in our services and ask for our company profile. We will send it right away with some explanation if you need any. Our official sites are accessible from this website.",
   },
   {
-    title: "Do Esensi Digital accept collaborating request from any kind of company?",
+    title:
+      "Do Esensi Digital accept collaborating request from any kind of company?",
     description:
       "Yes. Our services are available for every company and every kind of business you may have.",
   },
@@ -65,5 +66,32 @@ export const faq = [
     title: "How long is the contract offer?",
     description:
       "You can choose to collaborate with us within 6, or 12 months. This system is with a reason: to be able to pass the learning phase, have enough time to improve, and optimize our plan.",
+  },
+];
+
+export const works = [
+  {
+    title: "Apex Inc.",
+    subtitle: "Majestic Inc.",
+    image: "/images/scrollingService/branding.webp",
+    link: "https://google.com"
+  },
+  {
+    title: "Solstice",
+    subtitle: "Web Design",
+    image: "/images/scrollingService/branding.webp",
+    link: "https://google.com"
+  },
+  {
+    title: "Klara",
+    subtitle: "Web Design",
+    image: "/images/scrollingService/branding.webp",
+    link: "https://google.com"
+  },
+  {
+    title: "Mango Analytics",
+    subtitle: "Branding",
+    image: "/images/scrollingService/branding.webp",
+    link: "https://google.com"
   },
 ];
