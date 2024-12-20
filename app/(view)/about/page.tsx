@@ -67,7 +67,11 @@ const about = () => {
               to every project. Together, we build not just campaigns, but
               experiences that resonate and drive success.
             </p>
-            <AnimatedButtonUpscale text="Say Hello" className="bg-black mt-7" />
+            <AnimatedButtonUpscale
+              link="/contact"
+              text="Say Hello"
+              className="bg-black mt-7"
+            />
           </div>
           <div className=" w-full h-auto flex justify-center items-center">
             <Image
@@ -104,6 +108,7 @@ const about = () => {
           <FeaturesCard />
           <div className="my-14 flex justify-center">
             <AnimatedButtonUpscale
+              link="/contact"
               text="Book A Call"
               icon={<HandIcon />}
               className="bg-black "

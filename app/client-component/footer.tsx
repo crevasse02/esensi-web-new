@@ -19,6 +19,7 @@ export function Footer({ className }: { className?: string }) {
           <h1 className="text-xl font-bold">Esensi Digital</h1>
           <p className="opacity-50">Make it essential.</p>
           <AnimatedButtonUpscale
+            link="/contact"
             text="Book A Call"
             icon={<HandIcon />}
             className="bg-[#005490] p-2 text-sm border-transparent mt-5"

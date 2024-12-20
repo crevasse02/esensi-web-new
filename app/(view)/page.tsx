@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { FeaturesCard } from "../client-component/features_card";
 import HandIcon from "@/public/icons/hand-waving.svg";
-import {InfiniteMovingCardsComponentHome } from "../client-component/infinite_card";
+import { InfiniteMovingCardsComponentHome } from "../client-component/infinite_card";
 import { ScrollingService } from "../client-component/scrolling_service";
 import { cards, faq } from "@/app/client-component/data";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
@@ -85,7 +85,11 @@ export default function Home() {
           </p>
 
           <div className="mt-7">
-            <AnimatedButtonUpscale text="Say Hello" className="bg-black " />
+            <AnimatedButtonUpscale
+              link="/contact"
+              text="Say Hello"
+              className="bg-black "
+            />
           </div>
 
           <div className="flex flex-col items-center mt-7">
@@ -124,6 +128,7 @@ export default function Home() {
           <FeaturesCard />
           <div className=" mt-6 flex justify-center">
             <AnimatedButtonUpscale
+              link="/contact"
               text="Book A Call"
               icon={<HandIcon />}
               className="bg-black "
@@ -168,6 +173,7 @@ export default function Home() {
         </div>
         <div className="place-self-center mt-6">
           <AnimatedButtonUpscale
+            link="/contact"
             text="Book A Call"
             icon={<HandIcon />}
             className="bg-black "
@@ -216,7 +222,7 @@ export default function Home() {
           </h3>
         </div>
 
-        <div >
+        <div>
           <ScrollAnimate />
         </div>
       </section>
@@ -240,6 +246,7 @@ export default function Home() {
         </div>
         <div className="mt-7">
           <AnimatedButtonUpscale
+            link="/contact"
             text="Book A Call"
             icon={<HandIcon />}
             className="bg-black "
@@ -254,8 +261,8 @@ export default function Home() {
             Questions
           </Badge>
           <h3 className="md:text-[44px] text-[30px] text-center leading-none font-bold">
-            <span className="text-[#72716F]">Got questions?</span> We&apos;ve got
-            answers
+            <span className="text-[#72716F]">Got questions?</span> We&apos;ve
+            got answers
           </h3>
           <p className="text-center leading-normal mt-5 text-[#72716F]">
             Explore our frequently asked questions to find the information you
@@ -277,10 +284,12 @@ export default function Home() {
             <p
               className={`${instrumentSerif.className}  bg-clip-text text-white md:text-[48px] text-[24px]`}
             >
-              Why wait? Take the leap. Let&apos;s make your <br/> business essential
+              Why wait? Take the leap. Let&apos;s make your <br /> business
+              essential
             </p>
             <div className=" pointer-events-auto mt-20 flex justify-center">
               <AnimatedButtonUpscale
+                link="/contact"
                 text="Say Hello"
                 className="bg-white text-black px-10 py-4 border-none"
               />

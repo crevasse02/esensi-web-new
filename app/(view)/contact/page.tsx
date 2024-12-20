@@ -1,5 +1,7 @@
 import { ContactForm } from "@/app/client-component/contact_form";
 import React from "react";
+import { AnimatedButtonUpscale } from "@/components/ui/animate_button";
+import HandIcon from "@/public/icons/hand-waving.svg";
 
 const Contact = () => {
   return (
@@ -7,7 +9,7 @@ const Contact = () => {
       <div className="overflow-hidden ">
         <section
           className="bg-[#005490]  py-60  text-white bg-cover overflow-hidden bg-bottom flex flex-col justify-center items-center relative"
-          style={{ backgroundImage: "url('/images/BottomBg.webp')" }}
+          style={{ backgroundImage: "url('/images/HeroContact.webp')" }}
         >
           <div className="bg-[#ED9458] px-3 py-1 mb-7 rounded-full max-w-max shadow-xl">
             <ul className="list-disc text-white ">
@@ -28,8 +30,17 @@ const Contact = () => {
             </p>
           </div>
 
-          <div>
+          <div className="mt-5">
             <ContactForm/>
+          </div>
+          <div className="mt-10 flex flex-col justify-center">
+            <h6 className="text-[28px]">Or email us directly</h6>
+            <AnimatedButtonUpscale
+              link="/contact"
+              text="Book A Call"
+              icon={<HandIcon />}
+              className="bg-[#005490] mt-5"
+            />
           </div>
         </section>
       </div>

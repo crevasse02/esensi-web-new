@@ -30,6 +30,7 @@ const formSchema = z.object({
     .max(50, "Username is too long"),
   company: z.string(),
   email: z.string().email("Invalid email address"),
+  service: z.string(),
   message: z.string(),
 });
 
@@ -40,6 +41,7 @@ export function ContactForm() {
       username: "",
       company: "",
       email: "",
+      service: "",
       message: "",
     },
   });
@@ -111,17 +113,17 @@ export function ContactForm() {
           />
           <FormField
             control={form.control}
-            name="message"
+            name="service"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="opacity-55">Service</FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="bg-slate-50 rounded-lg">
-                      <SelectValue className="" placeholder="Select a verified email to display" />
+                    <SelectTrigger className="bg-slate-50 rounded-lg ">
+                      <SelectValue placeholder="Select..." />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -155,7 +157,7 @@ export function ContactForm() {
             )}
           />
           {/* Submit Button */}
-          <Button type="submit" className="w-full mt-5">
+          <Button type="submit" className="w-full mt-5 bg-[#005490]">
             Submit
           </Button>
         </div>
