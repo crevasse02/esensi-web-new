@@ -43,7 +43,7 @@ export function AnimatedButtonUpscale({
   className,
 }: AnimatedButtonProps) {
   return (
-    <Link href={link || "#"} passHref className="justify-center flex">
+    <Link href={link || "#"} passHref >
       <motion.button
         whileHover="hover" // Trigger the "hover" variant
         transition={{
